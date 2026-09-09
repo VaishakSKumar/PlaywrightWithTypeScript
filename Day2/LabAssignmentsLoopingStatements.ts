@@ -33,10 +33,86 @@
 // find a number greater than 15. Use the break statement within a for loop.
 //-------------------------------------------------------------------------
 // 1. Write a program to calculate the sum of the first 10 natural numbers using a while loop.
-let natural_Number:number=1
+{ let natural_Number:number=1
 let sum:number=0;
 while (natural_Number<=10) {
     sum=sum+natural_Number;
     natural_Number++;
 }
-console.log(`Sum of First 10 Natural Number is ${sum}`);
+console.log(`Sum of First 10 Natural Number is ${sum}`);}
+//-------------------------------------------------------------------------
+// 2. Write a program to calculate the factorial of a given number using a while loop.
+{ let number:number=3
+let natural_Number:number=1
+let factorial:number=1;
+while (natural_Number<=number) {
+    factorial=factorial*natural_Number;
+    natural_Number++;
+}
+console.log(`Factorial of First ${number} Number is ${factorial}`);}
+//-------------------------------------------------------------------------
+// 3. Write a program to reverse a given number using a while loop.
+{let given_Number:number=723;
+let reversed_number:number=0;
+let temp:number=0
+temp=given_Number
+while (temp!=0) {
+    let reminder:number=temp%10;
+    reversed_number=reversed_number*10+reminder;
+    temp=Math.floor(temp/10);
+}
+console.log(`The reversal of the ${given_Number} is ${reversed_number}`);}
+//-------------------------------------------------------------------------
+// 4. Write a program to check if a given number is a prime number using a while loop.
+{let number:number=1;
+let natural_Number:number=2;
+let isPrime:boolean=true;
+if(number<=1){
+        isPrime=false;
+}
+while (natural_Number<=number/2) {
+    if(number%natural_Number==0){
+        isPrime=false;    
+        break;    
+    }else{
+        isPrime=true;
+    }
+    natural_Number++;
+}
+if (isPrime){
+      console.log(number + " is a prime number.");
+}else{
+      console.log (number + " is a Composite number.");
+}
+}
+//-------------------------------------------------------------------------
+// 5. Write a program to find the largest digit in a given number using a while loop.
+{let given_Number:number=383;
+let temp:number=0
+let largestNumber:number=0;
+temp=given_Number
+while (temp!=0) {
+    let reminder:number=temp%10;
+    if (reminder>largestNumber) {
+        largestNumber=reminder;
+    }
+    temp=Math.floor(temp/10);
+}
+console.log(`The largest digit from the Given Number ${given_Number} is ${largestNumber}`);}
+//-------------------------------------------------------------------------
+// 6. Write a program to check if a given number is a palindrome using a while loop.
+{let given_Number:number=121;
+let palindrome_Number:number=0;
+let temp:number=0
+temp=given_Number
+while (temp!=0) {
+    let reminder:number=temp%10;
+    palindrome_Number=palindrome_Number*10+reminder;
+    temp=Math.floor(temp/10);
+}
+if(palindrome_Number===given_Number){
+    console.log(`The Number ${given_Number} is A Palindrome`);
+}else{
+    console.log(`The Number ${given_Number} is Not A Palindrome`);
+}}
+//-------------------------------------------------------------------------
