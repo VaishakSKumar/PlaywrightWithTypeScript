@@ -162,3 +162,96 @@ do {
         choice;
 } while (choice==='Yes');
 }
+//-------------------------------------------------------------------------
+// 9. Print Multiples of 5 from 5 to 50
+{ for (let i = 5; i <= 50; i += 5) {
+    console.log(`${i}`);
+}}
+//-------------------------------------------------------------------------
+// 10. Print Prime Numbers between 1 and 50
+{     
+    for (let i=2;i<=50; i++) {
+        let isPrime:boolean=true;
+        for (let divisor = 2; divisor <= Math.sqrt(i); divisor++) {
+            if (i % divisor === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(`${i}`);
+        }
+    }
+}
+//-------------------------------------------------------------------------
+// 11. Print Sum of Even Numbers between 1 and 20
+{let sum:number=0;
+for (let i=1;i<=20; i++) {
+    if (i%2==0) {
+          sum=sum+i;
+    }                  
+}
+console.log(`Sum Of Even Numbers From 1 to 20 is ${sum}`);
+}
+//-------------------------------------------------------------------------
+// 12. Print Sum of Odd Numbers between 1 and 20
+{let sum:number=0;
+for (let i=1;i<=20; i++) {
+    if (i%2!=0) {
+          sum=sum+i;
+    }                  
+}
+console.log(`Sum Of Odd Numbers From 1 to 20 is ${sum}`);
+}
+//-------------------------------------------------------------------------
+// 13. Print Table of 7
+{for (let i=1;i<=10; i++) {
+    console.log(`7 X ${i} = ${i*7}`);              
+}}
+//-------------------------------------------------------------------------
+// 14. Print Numbers Divisible by 3 and 5 from 1 to 100
+{let sum:number=0;
+for (let i=1;i<=100; i++) {
+    if (i%3===0&&i%5===0) {
+        console.log(`${i} is divisible by both 3 and 5`);
+    }                  
+}}
+//-------------------------------------------------------------------------
+// 15. Count Number of Digits in a Number
+{let given_Number:number=123;
+let temp:number=0;
+let count:number=0;
+temp=given_Number
+for (let index=temp;temp>0;temp=Math.floor(temp/10)) {
+    count++;
+}
+console.log(`${count}`);}
+//-------------------------------------------------------------------------
+// 16. Find Sum of Digits in a Number
+{let given_Number:number=123;
+let temp:number=0;
+let sum:number=0;
+temp=given_Number
+for (let index=temp;temp>0;temp=Math.floor(temp/10)) {
+    let reminder:number=temp%10;
+    sum+=reminder;
+}
+console.log(`${sum}`);}
+//-------------------------------------------------------------------------
+// 17. Print Multiples of 7 between 1 and 100
+{ for (let i=1;i<=100; i++) {
+    if (i%7==0) {
+        console.log(`${i}`);   
+    }             
+}}
+//-------------------------------------------------------------------------
+// 18. Calculate the sum of all even numbers from 1 to N.
+{let given_Number:number=20;
+let sum:number=0;
+for (let i=1;i<=given_Number; i++) {
+    if (i%2==0) {
+        sum=sum+i;
+    }                  
+}
+console.log(`Sum Of All Even Numbers From 1 to ${given_Number} is ${sum}`);}
+//-------------------------------------------------------------------------
