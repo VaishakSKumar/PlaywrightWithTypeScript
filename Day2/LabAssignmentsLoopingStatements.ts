@@ -255,3 +255,39 @@ for (let i=1;i<=given_Number; i++) {
 }
 console.log(`Sum Of All Even Numbers From 1 to ${given_Number} is ${sum}`);}
 //-------------------------------------------------------------------------
+// 19. Write a program to print the odd numbers from 1 to 20 using a for loop.
+//  Use the continue statement to skip even numbers.
+{
+console.log(`Odd Numbers From 1 to 20`);  
+for (let i=1;i<=20; i++) {
+    if (i%2==0) {
+         continue
+    }        
+    console.log(`${i}`);               
+}
+}
+//-------------------------------------------------------------------------
+// 20. Write a program to print numbers from 1 to 30, but skip numbers that are multiples of 5.
+// Use the continue statement within a while loop.
+{
+console.log(`Numbers From 1 to 30 by skipping numbers that are multiples of 5`);  
+let i:number=1;
+while (i<=30) {
+    if (i%5==0) {
+        i++;
+        continue;
+    }        
+    console.log(`${i}`);
+    i++;               
+}
+}
+
+//-------------------------------------------------------------------------
+// 21. Write a program to find and print the first even number between 1 and 10 using a for loop.
+//  Use the break statement to exit the loop as soon as you find the first even number.
+
+//-------------------------------------------------------------------------
+// 22. Write a program to print numbers from 1 to 30. 
+// Stop printing and exit the loop when you find a number greater than 15. 
+// Use the break statement within a for loop.
+//-------------------------------------------------------------------------
