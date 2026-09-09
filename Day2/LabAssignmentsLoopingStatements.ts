@@ -116,3 +116,49 @@ if(palindrome_Number===given_Number){
     console.log(`The Number ${given_Number} is Not A Palindrome`);
 }}
 //-------------------------------------------------------------------------
+// 7. Write a program to print numbers from 1 to 10 using a do-while loop.
+{
+let number:number=1;
+do {    
+    console.log(`${number}`);
+    number++;
+} while (number<=10);
+}
+//-------------------------------------------------------------------------
+// 8. Write a program that performs basic arithmetic operations (addition, subtraction,multiplication, and division) using a do-while loop until the user chooses to exit.
+{
+let number_1:number=1;
+let number_2:number=2;
+let choice:string='No';
+let operation:string='+';
+do {   
+    
+        console.log("\n--- Calculator Menu ---");
+        console.log("1. Addition (+)");
+        console.log("2. Subtraction (-)");
+        console.log("3. Multiplication (*)");
+        console.log("4. Division (/)");
+    
+    switch (operation) {
+            case '+':
+                console.log(`Result: ${number_1} + ${number_2} = ${number_1 + number_2}`);
+                break;
+            case '-':
+                console.log(`Result: ${number_1} - ${number_2} = ${number_1 - number_2}`);
+                break;
+            case '*':
+                console.log(`Result: ${number_1} * ${number_2} = ${number_1 * number_2}`);
+                break;
+            case '/':
+                if (number_2 === 0) {
+                    console.log("Error: Division by zero is not allowed.");
+                } else {
+                    console.log(`Result: ${number_1} / ${number_2} = ${number_1 / number_2}`);
+                }
+                break;
+            default:
+                console.log("Invalid operation.");            
+        }
+        choice;
+} while (choice==='Yes');
+}
