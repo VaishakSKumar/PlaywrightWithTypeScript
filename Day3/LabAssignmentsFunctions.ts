@@ -54,7 +54,7 @@ Implement the function cleanly to fulfill both overload contracts.
 */
 
 //-------------------------------------------------------------------------
-1./*Basic Arithmetic Named Function:
+/*1.Basic Arithmetic Named Function:
 Write a named function calculateTotal that takes two parameters:
 price (number) and taxRate (number), and returns the final calculated total amount as a number.*/
 
@@ -64,7 +64,7 @@ function calculateTotal(price:number,taxRate:number):number{
 }
 console.log(calculateTotal(23.5,26.6));
 //-------------------------------------------------------------------------
-2./*Anonymous Function Conversion:
+/*2.Anonymous Function Conversion:
 Assign an anonymous function to a variable named formatGreeting.
 It should accept firstName (string) and lastName (string) as parameters and
 return a single concatenated full name string formatted as "LastName, FirstName".
@@ -76,14 +76,14 @@ let formatGreeting=function(firstName:string,lastName:string):string{
 console.log(formatGreeting("Vaishak","S Kumar"))
 //-------------------------------------------------------------------------
 
-3./*Concise Arrow Function:
+/*3.Concise Arrow Function:
 Create a single-line arrow function isEven that takes a single parameter num (number)
 and returns a boolean (true if the number is even, false otherwise).*/
 
 let isEven=(num:number)=> num%2===0?true:false;
 console.log(isEven(22));
 //-------------------------------------------------------------------------
-/*Multi-line Arrow Function with Array Processing:
+/*4.Multi-line Arrow Function with Array Processing:
 Write a multi-line arrow function getPositiveNumbers that accepts an array of numbers numbers: number[] and returns
 a new array containing only the positive numbers greater than 0.*/
 let getPositiveNumbers=(...numbers:number[]):number[]=> {
@@ -98,4 +98,53 @@ let getPositiveNumbers=(...numbers:number[]):number[]=> {
     return positiveNumbers;
 }
 console.log(getPositiveNumbers(2,3,6,-25,-9,-7,8,6));
+//-------------------------------------------------------------------------
+
+/*5. Callback FunctionsSimple Greeting Callback:
+Write a function processUser that accepts userName (string) and a callback function callback:
+(name: string) => void.
+Inside processUser, format the name to uppercase and pass it to the callback execution.*/
+function displayGreeting(name:string):void {
+    console.log(`${name}`);    
+}
+function processUser(userName:string,callback:(name: string)=>void):void{
+    callback(userName.toUpperCase());       
+}
+processUser("lammine",displayGreeting)
+//-------------------------------------------------------------------------
+/*6. Array Element Transformer Callback: 
+Create a function transformArray
+that takes an array of numbers numbers:number[] and a transformation callback function operation: (val: number) => number.
+The function should return a new array where each element has been transformed by the callback.*/
+function squaretransformer(val:number):number {
+    return val*val;
+}
+function transformArray(numbers:number[],operation:(val: number) => number):number[]{
+    let transformedArray:number[]=[];
+    for (let index = 0; index < numbers.length; index++) {
+        transformedArray[index]=operation(numbers[index])        
+    }
+    return transformedArray;
+}
+console.log(transformArray([2,3,5,6],squaretransformer));
+
+//-------------------------------------------------------------------------
+/*7. Asynchronous Simulation Callback:
+Create a function fetchData that accepts a dataId (number) and 
+a completion callback onComplete:(status: string, result: string) => void.
+Simulate an operation check: 
+if dataId is greater than 0, invoke onComplete("SUCCESS", "Data loaded");
+otherwise, invoke onComplete("ERROR", "Invalid ID").*/
+function operationCheck(status: string, result: string):void{
+ console.log(`Your Status: ${status} and ${result}`); 
+}
+function fetchData(dataId:number,onComplete:(status: string, result: string) => void):void {
+    if (dataId>0) {
+        onComplete("SUCCESS", "Data loaded");
+    }else{
+        onComplete("ERROR", "Invalid ID");
+    }
+}
+
+fetchData(-10,operationCheck)
 //-------------------------------------------------------------------------
