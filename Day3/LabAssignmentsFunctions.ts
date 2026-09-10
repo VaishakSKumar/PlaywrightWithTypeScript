@@ -148,3 +148,50 @@ function fetchData(dataId:number,onComplete:(status: string, result: string) => 
 
 fetchData(-10,operationCheck)
 //-------------------------------------------------------------------------
+/*
+Function OverloadingOverloading with Different Parameter Types:
+Write a function formatInput with overload signatures to accept either a number or a string.
+If a number is passed, return the value multiplied by 100 as a number.
+If a string is passed, return the string repeated twice as a string.
+Provide a compatible implementation function to handle both cases.
+*/
+function formatInput(input:number):number;
+function formatInput(input:string):string;
+function formatInput(input:number|string):number|string{
+    return typeof input==="string"?input+input:input*100;
+};
+console.log(formatInput(23))
+console.log(formatInput("Kill"))
+//-------------------------------------------------------------------------
+/*
+Overloading with Different Parameter Counts:
+Create a function calculateArea with overload signatures:
+calculateArea(side: number): number (calculates square area)
+calculateArea(length: number, width: number): number (calculates rectangle area)
+Write the single implementation signature using an optional parameter to return the appropriate calculated area.
+*/
+function calculateArea(side: number): number;
+function calculateArea(length: number, width: number): number;
+function calculateArea(number_1: number, number_2?: number): number{
+    return number_2!=undefined?number_1*number_2:number_1**2;
+}
+console.log(`Area of Square:`+calculateArea(23))
+console.log(`Area of Rectangle:`+calculateArea(6,4))
+//-------------------------------------------------------------------------
+/*
+Overloading with Distinct Return Types:
+Write an overloaded function parseData:
+Signature 1: Takes input: string and returns string[] (splits string by comma).
+Signature 2: Takes input: number and returns boolean (returns true if input is positive, false otherwise).
+Implement the function cleanly to fulfill both overload contracts.
+*/
+
+function parseData(input: string): string[];
+function parseData(input: number): boolean;
+function parseData(input: string|number): string[]|boolean{
+    return typeof input==="string"?input.split(","):input > 0?true:false;
+}
+console.log(parseData("apple,banana,orange"))
+console.log(parseData(22))
+console.log(parseData(-22))
+//-------------------------------------------------------------------------
