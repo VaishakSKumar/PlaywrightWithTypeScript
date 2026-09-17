@@ -120,8 +120,50 @@ let arrayToCheckAllElementIsPsoitive=arrayPush.every((element)=> element>0)
 console.log(`To Check All Element In Array Is Positive:${arrayToCheckAllElementIsPsoitive}`);
 //-------------------------------------------------------------------------
 //17. Remove duplicates from an array using filter and indexOf. 
-
+let arrayRemoveDuplicates:number[]=[1,2,3,4,5,6,7,8,9,10,2,4,6,8]
+let arrayRemovedDuplicates:number[]=arrayRemoveDuplicates.filter(
+    function(element,index){
+       return arrayRemoveDuplicates.indexOf(element)===index;
+})
+console.log(arrayRemovedDuplicates);
 //-------------------------------------------------------------------------
 //18. Reverse an array. 
-
+let arrayBeforeReverse:number[]=[1,2,3,4,5,6,7,8,9,10]
+let arrayAfterReverse:number[]=[];
+for (let i = arrayBeforeReverse.length - 1; i >= 0; i--) {
+    arrayAfterReverse.push(arrayBeforeReverse[i]);
+}
+console.log(arrayAfterReverse);
 //-------------------------------------------------------------------------
+//19. Find the length of a string. 
+let arrayToFindLength:string="My Name Is Vaishak S Kumar  "
+console.log(arrayToFindLength.length)
+//-------------------------------------------------------------------------
+//20. Convert a string to uppercase using toUpperCase. 
+console.log(arrayToFindLength.toUpperCase())
+//-------------------------------------------------------------------------
+//21. Convert a string to lowercase using toLowerCase. 
+console.log(arrayToFindLength.toLowerCase())
+//-------------------------------------------------------------------------
+//22. Get a character at a specific index using charAt(). 
+console.log(arrayToFindLength.charAt(6))
+//-------------------------------------------------------------------------
+//23. Find the position of a word using indexOf(). 
+console.log(arrayToFindLength.indexOf('Vaishak'))
+//-------------------------------------------------------------------------
+//24. Check if a string includes a word using includes(). 
+console.log(arrayToFindLength.includes('Kum'))
+//-------------------------------------------------------------------------
+//25. Check if a string starts with a specific word using startsWith(). 
+console.log(arrayToFindLength.startsWith('V'))
+//-------------------------------------------------------------------------
+//26. Check if a string ends with a specific word using endsWith(). 
+console.log(arrayToFindLength.endsWith('V'))
+//-------------------------------------------------------------------------
+//27. Replace a word in a sentence using replace(). 
+console.log(arrayToFindLength.replace('Vaishak','Nivethaa'))
+//-------------------------------------------------------------------------
+//28. Split a sentence into words using split() and remove leading/trailing spaces using trim().
+console.log(arrayToFindLength.split(" "))
+console.log(arrayToFindLength.trim())
+//------------------------------------------------------------------------- 
