@@ -87,19 +87,41 @@ console.log(`Array To String In Array: ${arrayToString}`);
 console.log(`Character At 4 In String Array: ${arrayToString.charAt(4)}`);
 //-------------------------------------------------------------------------
 //11. Iterate through an array using forEach and print each element. 
-
+let arrayBeforeForEach:number[]=[1,2,3,4,5,6,7,8,9,10]
+console.log(`Iterate through array using forEach:`);
+arrayBeforeForEach.forEach(function(element){
+    console.log(`${element}`)
+})
 //-------------------------------------------------------------------------
 //12. Create a new array by doubling the values using map. 
+let arrayBeforeDoublingUsingMap:number[]=[1,2,3,4,5,6,7,8,9,10]
+console.log(`Before Doubling:${arrayBeforeDoublingUsingMap}`);
+let arrayAfterDoublingUsingMap=arrayBeforeDoublingUsingMap.map((element)=>element*2)
+console.log(`After Doubling:${arrayAfterDoublingUsingMap}`);
 //-------------------------------------------------------------------------
 //13. Filter out even numbers from an array using filter. 
+let arrayBeforeFilter:number[]=[1,2,3,4,5,6,7,8,9,10]
+console.log(`Before Filtering Even Numbers:${arrayBeforeFilter}`);
+let arrayAfterFilter=arrayBeforeFilter.filter((element)=> element%2==0)
+console.log(`After Filtering Even Numbers:${arrayAfterFilter}`);
 //-------------------------------------------------------------------------
 //14. Find the sum of all numbers using reduce. 
+let arrayBeforeReduce:number[]=[1,2,3,4,5,6,7,8,9,10]
+console.log(`Before Reduce To get Sum Of All Numbers:${arrayBeforeReduce}`);
+let arrayAfterReduce=arrayBeforeReduce.reduce((total,element)=> total+=element,0)
+console.log(`After Reduce To get Sum Of All Numbers:${arrayAfterReduce}`);
 //-------------------------------------------------------------------------
 //15. Check if at least one element is even using some. 
+let arrayToCheckElementIsEven=arrayPush.some((element)=> element%2==0)
+console.log(`To Check Element In Array Has Even:${arrayToCheckElementIsEven}`);
 //-------------------------------------------------------------------------
 //16. Check if all elements are positive using every. 
+let arrayToCheckAllElementIsPsoitive=arrayPush.every((element)=> element>0)
+console.log(`To Check All Element In Array Is Positive:${arrayToCheckAllElementIsPsoitive}`);
 //-------------------------------------------------------------------------
 //17. Remove duplicates from an array using filter and indexOf. 
+
 //-------------------------------------------------------------------------
 //18. Reverse an array. 
+
 //-------------------------------------------------------------------------
