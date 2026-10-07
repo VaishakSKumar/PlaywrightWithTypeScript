@@ -301,3 +301,79 @@ test("15. Find details buttons for pending tasks",async({page})=>{
                                     .getByRole("button",{name:"details"});
    await expect(detailsButtonForPendingTask).toHaveCount(1);
 })
+/*
+Title 
+16. Count tasks with "done" status 
+
+Steps
+1. Open the page
+2. Filter tasks with "done"
+
+Expected Result
+Count should be 2
+*/
+test("16. Count tasks with done status ",async({page})=>{    
+   const doneStatusTask=page.getByRole("listitem")
+                                    .filter({hasText:"done"});
+   await expect(doneStatusTask).toHaveCount(2);
+})
+
+/*
+Title
+17. Find tasks not marked "done" 
+
+Steps
+1. Open the page
+2. Filter tasks without "done"
+
+Expected Result
+2 tasks should be found
+*/
+test("17. Find tasks not marked done",async({page})=>{    
+   const doneStatusTask=page.locator(".card").nth(5)
+                            .getByRole("listitem")
+                            .filter({hasNotText:"done"});
+   await expect(doneStatusTask).toHaveCount(2);
+})
+/*
+Title
+18. Verify Product 2 button 
+
+Steps
+1. Open the page
+2. Locate "Product 2"
+3. Find its button
+
+Expected Result
+Button should be visible with text "Add to cart"
+*/
+test("18. Verify Product 2 button ",async({page})=>{    
+   const addToCartProduct2Button=page.getByRole("listitem")
+                            .filter({hasText:"Product 2"})
+                            .getByRole("button",{name:"Add to cart"})
+   await expect(addToCartProduct2Button).toContainText("Add to cart")
+})
+/*
+Title
+19. Verify stock status counts 
+
+Steps
+1. Open the page
+2. Count "In stock" items
+3. Count "Out of stock" items
+
+Expected Result
+In stock = 3, Out of stock = 2
+*/
+test("19. Verify stock status counts",async({page})=>{    
+   const inStock=page.locator(".card").nth(1)
+                            .getByRole("listitem")
+                            .filter({hasText:"In stock"});
+
+    const outOfStock=page.locator(".card").nth(1)
+                            .getByRole("listitem")
+                            .filter({hasText:"Out of stock"});
+
+   await expect(inStock).toHaveCount(3);
+   await expect(outOfStock).toHaveCount(2);
+})
