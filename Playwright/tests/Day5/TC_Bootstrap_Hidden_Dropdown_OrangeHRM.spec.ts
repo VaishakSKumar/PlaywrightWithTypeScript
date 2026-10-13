@@ -16,6 +16,32 @@ test("Bootstrap Hidden Dropdown",async({page})=>{
         await loginButton.click();
         const dashboardHeader=page.getByRole("heading").filter({hasText:"Dashboard"});
         await expect(dashboardHeader).toBeVisible();
+        await page.waitForTimeout(2000);
+        const pimMenu=page.locator("a span").filter({hasText:"PIM"});
+        await pimMenu.click();
+        const pimDashboardHeader=page.getByRole("heading").filter({hasText:"PIM"});
+        await expect(pimDashboardHeader).toBeVisible();
+        const jobTitleDropDown=page.locator("form i").nth(2);
+        await jobTitleDropDown.click();
+        const dropdownOption=page.locator("div[role='listbox'] span");
+        const dropDownOptionFirst=page.locator("div[role='listbox'] span").first();
+        await expect(dropDownOptionFirst).toBeVisible();
+        const dropdownOptionCount=await dropdownOption.count();
+        console.log(dropdownOptionCount);
+        const allDropdownOptionText=await dropdownOption.allInnerTexts();
+        console.log(allDropdownOptionText);
+
+        for (let index = 0; index < dropdownOptionCount; index++) {
+           const dropDownOptions=dropdownOption.nth(index)
+           const dropDownOptionsText=await dropDownOptions.innerText();
+           console.log(dropDownOptionsText);
+
+           if (dropDownOptionsText==="Automaton Tester") { 
+             await dropDownOptions.click();
+             break;
+           }
+        }
+        await page.waitForTimeout(2000);
     })
 
     test.afterAll(async({page})=>{
