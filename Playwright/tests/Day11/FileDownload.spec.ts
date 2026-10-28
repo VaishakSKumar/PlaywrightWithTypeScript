@@ -42,7 +42,6 @@ test("File Open PDF Browser Context With Emulator",async()=>{
     const context=await browser.newContext({...devices['iPhone 15']});
     const page=await context.newPage();
     await page.goto("https://sdetqa.vercel.app/autoplay")
-    const filePath="Download";
     const [pdfPage]=await Promise.all(
         [
             page.context().waitForEvent("page"),
