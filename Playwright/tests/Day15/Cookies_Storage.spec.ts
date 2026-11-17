@@ -1,5 +1,4 @@
 import { test,expect } from "@playwright/test";
-import console from "console";
 import fs from "fs";
 
 const cookieFile="./Download/cookiesFile.json"
