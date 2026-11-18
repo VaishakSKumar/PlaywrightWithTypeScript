@@ -5,8 +5,9 @@ const loginCredentials:string[][]=[
     ["validUser@example.com","testxyz","invalid"],
     ["","","invalid"]
 ]
-for(const [email,password,validity] of loginCredentials){
+
 test.describe("Login Validation",async()=>{
+    for(const [email,password,validity] of loginCredentials){
 test(`Login Validation for ${email} and ${password}`,async({page})=>{
     await page.goto("https://demowebshop.tricentis.com/login")
     await page.locator("a[href='/login']").click();
@@ -21,5 +22,5 @@ test(`Login Validation for ${email} and ${password}`,async({page})=>{
     }
     
 })
-})
 }
+})
