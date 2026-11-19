@@ -1,0 +1,50 @@
+[
+  {
+    "principal":100000,
+    "rate":6.5,
+    "period":5,
+    "periodType":"Years",
+    "frequency":"Half-Yearly",
+    "maturityValue":"₹ 1,37,689"
+  },
+  {
+    "principal":20000,
+    "rate":10,
+    "period":2,
+    "periodType":"Years",
+    "frequency":"Monthly",
+    "maturityValue":"₹ 24,408"
+  },
+  {
+    "principal":30000,
+    "rate":10,
+    "period":5,
+    "periodType":"Months",
+    "frequency":"Quarterly",
+    "maturityValue":"₹ 31,519"
+  },
+  {
+    "principal":40000,
+    "rate":10,
+    "period":3,
+    "periodType":"Months",
+    "frequency":"Yearly",
+    "maturityValue":"₹ 40,000"
+  },
+  {
+    "principal":50000,
+    "rate":10,
+    "period":2,
+    "periodType":"Months",
+    "frequency":"Monthly",
+    "maturityValue":"₹ 50,837"
+  },
+  {
+    "principal":75000,
+    "rate":10,
+    "period":6,
+    "periodType":"Years",
+    "frequency":"Quarterly",
+    "maturityValue":"₹ 1,35,654"
+  }
+]

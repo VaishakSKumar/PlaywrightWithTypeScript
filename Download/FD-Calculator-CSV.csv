@@ -1,0 +1,7 @@
+﻿principal,rate,period,periodType,frequency,maturityValue
+100000,6.5,5,Years,Half-Yearly,"₹ 1,37,689"
+20000,10,2,Years,Monthly,"₹ 24,408"
+30000,10,5,Months,Quarterly,"₹ 31,519"
+40000,10,3,Months,Yearly,"₹ 40,000"
+50000,10,2,Months,Monthly,"₹ 50,837"
+75000,10,6,Years,Quarterly,"₹ 1,35,654"
