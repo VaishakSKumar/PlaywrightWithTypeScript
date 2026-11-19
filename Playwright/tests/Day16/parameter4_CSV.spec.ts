@@ -5,9 +5,8 @@ import { parse } from "csv-parse/sync";
 
 const dataFile = path.join(__dirname, "../../../Download/data.csv");
 const jsonFile = fs.readFileSync(dataFile, "utf-8");
-type LoginData = { email: string; password: string; validity: string };
 
-const loginCredentials: LoginData[] = parse(jsonFile, {
+const loginCredentials:any[] = parse(jsonFile, {
   columns: true,
   skip_empty_lines: true,
   bom: true,
