@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","22197","Laptops are listed","chromium","2026-11-24","passed","2026-11-24","Demoblaze Store > Catalog","Day17\demoblaze.spec.ts","",""
+"","25067","Add to cart","chromium","2026-11-24","passed","2026-11-24","Demoblaze Store > Cart","Day17\demoblaze.spec.ts","",""
+"","8859","Product details","chromium","2026-11-24","passed","2026-11-24","Demoblaze Store > Catalog","Day17\demoblaze.spec.ts","",""
+"","0","Login (not built yet)","chromium","2026-11-24","skipped","2026-11-24","Demoblaze Store > Cart","Day17\demoblaze.spec.ts","",""
+"","0","Fix The Bug","chromium","2026-11-24","skipped","2026-11-24","Demoblaze Store > Cart","Day17\demoblaze.spec.ts","",""
+"","21670","Known bug","chromium","2026-11-24","passed","2026-11-24","Demoblaze Store > Cart","Day17\demoblaze.spec.ts","",""
